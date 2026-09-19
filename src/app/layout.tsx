@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layouts/Navbar";
@@ -17,9 +16,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "السير مجدي يعقوب",
+  metadataBase: new URL("https://magdi-yacoub-landing.vercel.app/"),
+  title: "Sir Magdi Yacoub",
   description:
-    "تعرف على مسيرة السير مجدي يعقوب وإنجازاته في جراحة القلب والبحث العلمي والعمل الإنساني ومؤسسة مجدي يعقوب للقلب.",
+    "Explore the life, achievements, and humanitarian legacy of Sir Magdi Yacoub.",
+
+  openGraph: {
+    title: "Sir Magdi Yacoub",
+    description:
+      "Explore the life, achievements, and humanitarian legacy of Sir Magdi Yacoub.",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sir Magdi Yacoub",
+      },
+    ],
+
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -28,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<html lang="ar" dir="rtl" suppressHydrationWarning>
-        <body
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
+      <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
@@ -38,10 +55,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-                <Navbar/>
+          <Navbar />
 
           {children}
-          <Footer/>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
