@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeartPulse } from "lucide-react";
+import { Palse } from "../animation/Palse";
 
 const footerLinks = [
   { label: "عن مجدي يعقوب", href: "#about" },
@@ -19,10 +20,11 @@ export function Footer() {
             href="/"
             className="flex items-center gap-2 font-semibold"
           >
-            <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <Palse>
+            <span className="flex size-9 items-center justify-center rounded-xl  text-red-500">
               <HeartPulse className="size-5" />
             </span>
-
+</Palse>
             <span>مجدي يعقوب</span>
           </Link>
 
@@ -35,7 +37,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-md font-bold text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>

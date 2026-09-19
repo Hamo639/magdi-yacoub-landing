@@ -29,7 +29,7 @@ export function AboutSection() {
           {/* محتوى القسم */}
           <Reveal delay={0.18}>
           <div className="mr-3">
-            <p className="text-lg leading-9 text-muted-foreground">
+            <p className="text-lg font-bold leading-9 text-muted-foreground">
               السير مجدي يعقوب جرّاح قلب وعالم، جمع خلال مسيرته بين الريادة
               في جراحة القلب، والبحث العلمي، والتعليم، والعمل الإنساني،
               واضعًا إنقاذ حياة المرضى وتطوير طب القلب في صميم رسالته.
@@ -52,7 +52,7 @@ export function AboutSection() {
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                    <p className="mt-2 text-[14px] font-bold leading-7 text-muted-foreground">
                       {item.description}
                     </p>
                   </article>

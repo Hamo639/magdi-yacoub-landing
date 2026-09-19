@@ -50,7 +50,7 @@ export function JourneySection() {
 
             {/* المحتوى */}
             <div
-              className={`mr-16 md:mr-0 ${
+              className={`mr-16 md:mr-0  ${
                 index % 2 === 0
                   ? "md:col-start-1 md:pl-16"
                   : "md:col-start-2 md:pr-16"
@@ -69,7 +69,7 @@ export function JourneySection() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 leading-7 text-muted-foreground">
+                  <p className="mt-3 leading-7 text-[16px] font-bold text-muted-foreground">
                     {item.description}
                   </p>
                 </div>

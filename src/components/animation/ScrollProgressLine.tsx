@@ -18,7 +18,7 @@ export function ScrollProgressLine({
   });
 
   const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
+    stiffness: 200,
     damping: 30,
     restDelta: 0.001,
   });

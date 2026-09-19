@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, HeartPulse } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Reveal } from "../animation/Reveal";
+import { Palse } from "../animation/Palse";
 
 export function FoundationSection() {
   return (
@@ -14,6 +16,7 @@ export function FoundationSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           
           {/* الصورة */}
+          <Reveal direction="right" >
           <div className="relative">
             <div
               aria-hidden="true"
@@ -32,14 +35,17 @@ export function FoundationSection() {
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
 
               <div className="absolute bottom-6 right-6">
-                <div className="flex size-12 items-center justify-center rounded-2xl bg-white/90 text-primary shadow-lg backdrop-blur">
+                <Palse>
+                <div className="flex size-12 items-center justify-center rounded-2xl  text-red-500 shadow-2xl">
                   <HeartPulse className="size-6" />
                 </div>
+                </Palse>
               </div>
             </div>
           </div>
-
+</Reveal>
           {/* المحتوى */}
+          <Reveal direction="left" >
           <div className="mr-3">
             <p className="mb-4 text-sm font-semibold text-primary">
               مؤسسة مجدي يعقوب للقلب
@@ -58,15 +64,9 @@ export function FoundationSection() {
               المتخصصة في أمراض وجراحات القلب.
             </p>
 
-            <div className="mt-8">
-              <Button size="lg" asChild>
-                <Link href="#foundation-details">
-                  تعرف على المؤسسة
-                  <ArrowLeft className="size-4" />
-                </Link>
-              </Button>
-            </div>
+           
           </div>
+          </Reveal>
 
         </div>
       </div>

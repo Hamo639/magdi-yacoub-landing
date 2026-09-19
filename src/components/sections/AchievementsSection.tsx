@@ -38,7 +38,7 @@ export function AchievementsSection() {
             return (
               <Reveal
                 key={achievement.title}
-                delay={index * 0.1}
+                delay={index * 0.2}
               >
                 <article className="group relative h-full overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
@@ -54,7 +54,7 @@ export function AchievementsSection() {
                     {achievement.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  <p className="mt-3 text-sm font-bold leading-7 text-muted-foreground">
                     {achievement.description}
                   </p>
 

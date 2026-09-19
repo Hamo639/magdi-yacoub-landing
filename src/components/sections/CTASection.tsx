@@ -2,11 +2,12 @@ import Link from "next/link";
 import { ArrowLeft, HeartPulse } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Palse } from "../animation/Palse";
 
 export function CTASection() {
   return (
     <section className="px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-primary px-6 py-14 text-primary-foreground sm:px-10 lg:px-16 lg:py-20">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-primary/60 px-6 py-14 text-primary-foreground sm:px-10 lg:px-16 lg:py-20">
         
         {/* Decorative shapes */}
         <div
@@ -20,10 +21,11 @@ export function CTASection() {
         />
 
         <div className="relative z-10 mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-6 flex size-14 items-center justify-center rounded-2xl bg-white/10">
+          <Palse>
+          <div className="mx-auto mb-6 flex size-14 items-center justify-center rounded-2xl text-red-500">
             <HeartPulse className="size-7" />
           </div>
-
+</Palse>
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             كن جزءًا من رسالة
             <span className="block">تمنح القلوب فرصة جديدة</span>

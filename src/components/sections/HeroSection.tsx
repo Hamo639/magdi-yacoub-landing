@@ -5,17 +5,15 @@ import { ArrowLeft, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "../animation/Reveal";
 import { FloatingGlow } from "../animation/FloatingGlow";
+import { Palse } from "../animation/Palse";
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Background Glows */}
-      <FloatingGlow className="pointer-events-none absolute -top-32 right-0 size-72 rounded-full bg-primary/20 blur-3xl sm:size-96" />
+      <FloatingGlow className=" absolute -top-10 right-0 size-72 rounded-full bg-primary/20 blur-3xl sm:size-96" />
 
-      <FloatingGlow
-        delay={1.5}
-        className="pointer-events-none absolute bottom-0 left-0 size-64 rounded-full bg-destructive/10 blur-3xl sm:size-80"
-      />
+      
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-10 sm:px-6 sm:py-16 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-20">
         
@@ -25,7 +23,10 @@ export function HeroSection() {
           {/* Badge */}
           <Reveal delay={0.05}>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border bg-background/70 px-3 py-2 text-xs font-medium text-muted-foreground backdrop-blur sm:mb-6 sm:px-4 sm:text-sm">
+
+            <Palse>
               <HeartPulse className="size-3.5 shrink-0 text-destructive sm:size-4" />
+              </Palse>
               <span>جرّاح قلب • عالم • رائد في العمل الإنساني</span>
             </div>
           </Reveal>
@@ -42,7 +43,7 @@ export function HeroSection() {
 
           {/* Description */}
           <Reveal delay={0.25}>
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0">
+            <p className="mx-auto mt-5 max-w-xl text-sm font-bold leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0">
               اكتشف المسيرة الاستثنائية للسير مجدي يعقوب، أحد أبرز رواد جراحة
               القلب، والذي امتد أثره من الابتكار الطبي والبحث العلمي إلى العمل
               الإنساني ورعاية مرضى القلب.
@@ -85,7 +86,7 @@ export function HeroSection() {
         >
           <FloatingGlow
             delay={0.8}
-            className="pointer-events-none absolute inset-8 -z-10 rounded-[3rem] bg-primary/20 blur-2xl"
+            className="absolute inset-6 -z-10 rounded-[3rem] bg-primary/20 blur-2xl"
           />
 
           <div className="group relative aspect-4/5 overflow-hidden rounded-2xl border bg-muted shadow-xl shadow-primary/10 sm:rounded-[2rem] sm:shadow-2xl">

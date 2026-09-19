@@ -5,20 +5,19 @@ import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
+  
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { ThemeToggle } from "./ThemeToogle";
 import { NavLinks } from "./NavLinks";
 import { navLinks } from "@/data/site-data";
+import { Palse } from "../animation/Palse";
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 px-2 pt-2 sm:px-6 sm:pt-3">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between rounded-xl border border-border/60 bg-background/90 px-3 shadow-sm backdrop-blur-xl sm:h-16 sm:rounded-2xl sm:px-5">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-xl border border-border/60 bg-background/90 px-3 shadow-sm backdrop-blur-xl sm:h-16 sm:rounded-2xl sm:px-5">
         
         {/* Logo */}
         <Link
@@ -26,16 +25,17 @@ export function Navbar() {
           className="group flex shrink-0 items-center gap-2 sm:gap-3"
           aria-label="الصفحة الرئيسية"
         >
-          <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-10 sm:rounded-xl">
-            <HeartPulse className="size-4 sm:size-5" />
+          <Palse>
+          <span className="flex  items-center justify-center   text-red-500 shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-10 sm:rounded-xl">
+            <HeartPulse className="size-10 sm:size-5" />
           </span>
-
+</Palse>
           <div className="leading-tight">
-            <p className="text-sm font-bold tracking-tight sm:text-base">
+            <p className="text-lg font-bold tracking-tight sm:text-base">
               مجدي يعقوب
             </p>
 
-            <p className="mt-0.5 hidden text-[11px] text-muted-foreground sm:block">
+            <p className="mt-0.5 hidden text-[18px] text-muted-foreground sm:block">
               جراح القلب والإنسانية
             </p>
           </div>
@@ -45,12 +45,12 @@ export function Navbar() {
         <NavLinks />
 
         {/* Actions */}
-        <div className="flex shrink-0 items-center gap-1">
+        <div className="flex shrink-0 justify-center items-center gap-2">
           <ThemeToggle />
 
           <Button
-            size="sm"
-            className="hidden rounded-xl lg:inline-flex"
+            size="lg"
+            className="hidden rounded-xl lg:inline-flex mb-1"
             asChild
           >
             <Link href="#foundation">

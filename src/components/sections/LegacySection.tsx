@@ -1,12 +1,13 @@
 import { Heart } from "lucide-react";
+import { FloatingGlow } from "../animation/FloatingGlow";
 
 export function LegacySection() {
   return (
     <section className="relative overflow-hidden py-20 sm:py-24 lg:py-32">
       {/* Background decoration */}
-      <div
-        aria-hidden="true"
-        className="absolute left-1/2 top-1/2 -z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl"
+      <FloatingGlow
+      delay={0.2}
+        className="absolute left-1/2 top-1/2 -z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl"
       />
 
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">

@@ -1,5 +1,4 @@
-import { Footer } from "@/components/layouts/Footer";
-import { Navbar } from "@/components/layouts/Navbar";
+
 import { AboutSection } from "@/components/sections/AboutSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -11,7 +10,6 @@ import { LegacySection } from "@/components/sections/LegacySection";
 export default function Home() {
   return (
     <>
-      <Navbar />
 
       <main>
       <HeroSection/>
@@ -23,7 +21,6 @@ export default function Home() {
          <CTASection/>
         
       </main>
-       <Footer/>
     </>
   );
 }
