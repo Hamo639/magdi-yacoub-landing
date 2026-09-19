@@ -26,8 +26,8 @@ export function Navbar() {
           aria-label="الصفحة الرئيسية"
         >
           <Palse>
-          <span className="flex  items-center justify-center   text-red-500 shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-10 sm:rounded-xl">
-            <HeartPulse className="size-10 sm:size-5" />
+          <span className="flex size-6  items-center justify-center   text-red-500 shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-10 sm:rounded-xl">
+            <HeartPulse className="size-5 md:size-5" />
           </span>
 </Palse>
           <div className="leading-tight">
